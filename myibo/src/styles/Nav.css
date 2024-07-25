@@ -19,7 +19,7 @@
 .search-container {
   display: flex; 
   align-items: center; 
-  margin-left: auto; /* 자동으로 오른쪽으로 정렬 */
+  margin-left: auto; 
   margin-right: 15px;
 }
 
@@ -94,3 +94,5 @@
     margin-bottom: 10px;
   }
 }
+
+/* 중간저장 */
