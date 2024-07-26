@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from './components/Nav';
-import Content from './components/MainContent';
+import Content from './components/Section1';
 import './App.css';
 import main1 from './img/main1.png';
 import main2 from './img/main2.png';
