@@ -1,0 +1,24 @@
+.MyInsuranceContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.loading,
+.error {
+  font-size: 1.5rem;
+}
+
+.content-wrapper {
+  background-color: #f3f9f5;
+  border-radius: 15px;
+  padding: 20px 50px 20px 50px;
+  box-shadow: 0 4px 8px rgba(114, 116, 118, 0.2);
+}

@@ -1,0 +1,122 @@
+.signup-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 50px;
+  height: 1200px;
+}
+
+.signup-form {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: not-allowed;
+  background-color: #ccc;
+  color: white;
+}
+
+.submit-button.active {
+  cursor: pointer;
+  background-color: #28a745;
+}
+
+.submit-button.inactive {
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
+.submit-button:hover.active {
+  background-color: #033b0f;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .signup-form-container {
+    padding-top: 20px;
+  }
+
+  .signup-form {
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .error-message {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-form-container {
+    padding-top: 10px;
+  }
+
+  .signup-form {
+    padding: 10px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .error-message {
+    font-size: 10px;
+  }
+}

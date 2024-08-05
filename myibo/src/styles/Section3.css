@@ -1,0 +1,61 @@
+.section3 {
+  font-family: "Pretendard";
+  background-image: url("../img/section3bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 900px;
+  display: flex;
+}
+
+.section3-img img {
+  height: 100%;
+}
+
+.section3-content {
+  font-size: 1.2vw;
+  margin: auto;
+}
+
+.section3-title {
+  margin-bottom: 50px;
+}
+
+.section3-title h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.8em;
+}
+
+.section3-title b {
+  font-size: 1.1em;
+  font-weight: 800;
+}
+
+.section3 a {
+  color: black;
+}
+
+.section3 a:hover {
+  color: darkgray;
+}
+
+@media (max-width: 1500px) {
+  .section3 {
+    height: 50vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .section3 {
+    height: 80vw;
+  }
+
+  .section3-img img {
+    display: none;
+  }
+
+  .section3-content {
+    margin: auto;
+    font-size: 2.5vw;
+  }
+}
