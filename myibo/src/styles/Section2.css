@@ -1,0 +1,179 @@
+.section2 {
+  text-align: center;
+  font-family: "Pretendard";
+  background-image: url("../img/section2Bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 900px;
+  /* width: 100%; */
+}
+
+.section2-title {
+  font-size: 3vw;
+  font-weight: bold;
+  margin: 0 0 4vw 0;
+  color: #000;
+  padding: 9vw 0 0 0;
+}
+
+.section2-container {
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+  flex-wrap: wrap; /* 아이템이 줄바꿈되도록 설정 */
+}
+
+.section2-item {
+  border-radius: 10px;
+  padding: 20px;
+  width: 15vw;
+  min-width: 250px; /* 최소 너비 설정 */
+}
+
+.section2-icon {
+  margin-bottom: 10px;
+}
+
+.section2-icon img {
+  width: 13vw; /* 기본 아이콘 크기 */
+  height: 13vw;
+}
+
+.section2-item h3 {
+  font-size: 2vw; /* 기본 글자 크기 */
+  margin: 15px 0;
+}
+
+.section2-item p {
+  font-size: 1vw; /* 기본 글자 크기 */
+  margin: 10px 0;
+  color: #555;
+}
+
+.section2-highlight {
+  background-color: #ffeb3b;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+@media (max-width: 1500px) {
+  .section2 {
+    height: 50vw;
+  }
+
+  .section2-title {
+    font-size: 4vw;
+    padding: 10vw 0 0 0;
+  }
+
+  .section2-item h3 {
+    font-size: 2.5vw;
+  }
+
+  .section2-item p {
+    font-size: 1.3vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section2 {
+    height: 520px;
+  }
+
+  .section2-title {
+    font-size: 4vw;
+    padding: 10vw 0 0 0;
+  }
+
+  .section2-item h3 {
+    font-size: 2.5vw;
+  }
+
+  .section2-item p {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .section2 {
+    height: 500px;
+  }
+
+  .section2-title {
+    font-size: 4vw;
+    padding: 10vw 0 0 0;
+  }
+
+  .section2-item h3 {
+    font-size: 2.5vw;
+  }
+
+  .section2-item p {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 740px) {
+  .section2 {
+    height: 130vw;
+  }
+
+  .section2-title {
+    font-size: 5vw;
+  }
+
+  .section2-item {
+    width: 50vw;
+  }
+
+  .section2-icon img {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .section2-item h3 {
+    font-size: 5vw;
+  }
+
+  .section2-item p {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .section2 {
+    height: 730px;
+  }
+
+  .section2-title {
+    font-size: 8vw;
+  }
+
+  .section2-item {
+    width: 90vw;
+  }
+
+  .section2-icon img {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .section2-item h3 {
+    font-size: 5vw;
+  }
+
+  .section2-item p {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .section2 {
+    height: 600px;
+  }
+
+  .section2-title {
+    font-size: 6vw;
+  }
+}

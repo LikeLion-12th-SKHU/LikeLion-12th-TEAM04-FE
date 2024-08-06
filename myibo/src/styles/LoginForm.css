@@ -1,0 +1,120 @@
+.login-form-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  margin-top: 300px;
+  margin-bottom: 200px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+input {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1f704e;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.signup-button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #696969;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px; /* This ensures there is space between login button and signup button */
+}
+
+.signup-button:hover {
+  background-color: #4887b8;
+}
+
+/* Ensure the signup button stays at the bottom */
+.login-form-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .login-form-container {
+    padding: 15px;
+    margin-top: 200px;
+    margin-bottom: 150px;
+  }
+
+  .submit-button,
+  .signup-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .error-message,
+  .success-message {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form-container {
+    padding: 10px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .submit-button,
+  .signup-button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .error-message,
+  .success-message {
+    font-size: 10px;
+  }
+}

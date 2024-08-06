@@ -1,0 +1,64 @@
+
+
+.container {
+  background-image: url('../img/MyPage.png');
+  background-size: contain; /* 이미지가 고정된 상태로 줄어들도록 설정 */
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Pretendard";
+  height: 900px;
+  width: auto;
+  flex-direction: column; /* 세로 방향 정렬 */
+}
+
+.insurance-info {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mypage-main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.insurance-link {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: 80%; /* 기본 너비 */
+  max-width: 600px; /* 최대 너비 */
+  text-align: center; /* 가운데 정렬 */
+  text-decoration: none; /* 링크 밑줄 제거 */
+  color: inherit; /* 링크 색상 상속 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .insurance-info {
+    font-size: 20px;
+  }
+
+  .insurance-link {
+    width: 90%; /* 화면 크기가 작아질 때 너비 조정 */
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .insurance-info {
+    font-size: 18px;
+  }
+
+  .insurance-link {
+    width: 95%; /* 화면 크기가 더 작아질 때 너비 조정 */
+    padding: 10px;
+  }
+}
