@@ -43,7 +43,7 @@ input {
 }
 
 .submit-button:hover {
-  background-color: #0056b3;
+  background-color: #FEF380;
 }
 
 .error-message {
@@ -53,7 +53,7 @@ input {
 }
 
 .success-message {
-  color: green;
+  color: blue;
   font-size: 14px;
   margin-top: 10px;
 }
@@ -62,23 +62,39 @@ input {
   padding: 10px;
   border: none;
   border-radius: 4px;
-  background-color: #696969;
+  background-color: #FFC4FC;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 20px; /* This ensures there is space between login button and signup button */
+  margin-top: 20px; 
 }
 
 .signup-button:hover {
-  background-color: #4887b8;
+  background-color: #FEF380;
 }
 
-/* Ensure the signup button stays at the bottom */
 .login-form-footer {
   margin-top: 20px;
   display: flex;
   justify-content: center;
 }
+
+
+.mypage-button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #319BED;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.mypage-button:hover {
+  background-color: #FEF380;
+}
+
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
@@ -89,7 +105,8 @@ input {
   }
 
   .submit-button,
-  .signup-button {
+  .signup-button,
+  .mypage-button {
     font-size: 14px;
     padding: 8px;
   }
@@ -108,7 +125,8 @@ input {
   }
 
   .submit-button,
-  .signup-button {
+  .signup-button,
+  .mypage-button {
     font-size: 12px;
     padding: 6px;
   }

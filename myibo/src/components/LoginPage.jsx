@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/LoginForm.css';
 
 const LoginPage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [formData, setFormData] = useState({ id: '', password: '' });
   const [errors, setErrors] = useState({ id: '', password: '' });
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const messageParam = queryParams.get('message');
+    if (messageParam) {
+      setErrorMessage(messageParam);
+    }
+  }, [location]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -70,6 +79,10 @@ const LoginPage = () => {
     navigate('/signup');
   };
 
+  const handleMyPageClick = () => {
+    navigate('/MyPage');
+  };
+
   return (
     <div className="login-form-container">
       <form className="login-form" onSubmit={handleSubmit}>
@@ -105,6 +118,7 @@ const LoginPage = () => {
         {successMessage && <p className="success-message">{successMessage}</p>}
         {errorMessage && <p className="error-message">{errorMessage}</p>}
         <button type="button" className="signup-button" onClick={handleSignupClick}>회원가입하기</button>
+        <button type="button" className="mypage-button" onClick={handleMyPageClick}>마이페이지 가기</button>
       </form>
     </div>
   );

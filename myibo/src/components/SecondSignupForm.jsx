@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import {
   setSmsAuthNo,
@@ -7,10 +8,9 @@ import {
 } from '../state/slices/signupSlice';
 import '../styles/SignupForm.css';
 
-//포스트 오류만 
-
 const SecondSignupForm = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate(); // 추가된 부분
   const formData = useSelector((state) => state.signup);
   const [errors, setErrors] = useState({
     smsAuthNo: '',
@@ -81,7 +81,7 @@ const SecondSignupForm = () => {
 
         // 2차 인증 완료 처리
         dispatch(setFirstAuthCompleted(false));
-        // 성공 메시지 또는 리다이렉트 처리
+        navigate('/'); // 추가된 부분
       } catch (error) {
         console.error('2차 인증 에러:', error.response?.data || error.message);
       }

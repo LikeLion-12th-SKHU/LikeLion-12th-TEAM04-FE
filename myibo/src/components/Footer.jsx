@@ -3,17 +3,27 @@ import "../styles/FooterSt.css";
 import githubIcon from "../img/githubIcon.png";
 import backgroundImg from "../img/backgroundImg.png";
 
-
-
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
           <h3>WHO WE ARE</h3>
-          <a href="https://github.com/kimsieun99/LikeLion-12th-TEAM04-FE">
-            <img src={githubIcon} alt="githubIcon" />
-          </a>
+          <div className="git-icon">
+            <div>
+              <a href="https://github.com/LikeLion-12th-SKHU/LikeLion-12th-TEAM04-BE">
+                <img src={githubIcon} alt="githubIcon" />
+              </a>
+              <h4>BE</h4>
+            </div>
+            <div>
+              <a href="https://github.com/LikeLion-12th-SKHU/LikeLion-12th-TEAM04-FE">
+                <img src={githubIcon} alt="githubIcon" />
+              </a>
+              <h4>FE</h4>
+            </div>
+          </div>
+
           {/* 이거 나중에 수정할게요 */}
         </div>
         <div className="footer-section">

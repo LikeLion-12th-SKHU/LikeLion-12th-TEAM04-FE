@@ -73,9 +73,12 @@ const SearchMyInsurance = () => {
         <div>{error}</div>
       ) : (
         <div>
-          <h3>회원님께서 가입한 보험이에요.</h3>
+          <h2>회원님께서 가입한 보험이에요</h2>
           {insuranceData.length === 0 ? (
-            <div>보험이력이 없습니다. 보험 정보를 연결해주세요</div>
+            <div>
+              보험이력이 없습니다. <br />
+              보험 정보를 연결해주세요
+            </div>
           ) : (
             <div>
               {insuranceData.map((insurance, index) => (
@@ -90,7 +93,7 @@ const SearchMyInsurance = () => {
                     rel="noopener noreferrer"
                     className="logo"
                   >
-                    로고
+                    공식 페이지
                   </a>
                   <div className="company-name">
                     {insurance.resCompanyNm}

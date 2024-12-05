@@ -75,20 +75,29 @@ const SearchRecommendedInsurance = () => {
         <div>{error}</div>
       ) : (
         <div>
-          <h3>이런 보험도 있어요!</h3>
+          <h2>이런 보험도 있어요!</h2>
           {recommendedData.length === 0 ? (
             <div>추천 보험이 없습니다.</div>
           ) : (
-            <ul>
+            <div>
               {recommendedData.map((insurance, index) => (
-                <li key={index}>
-                  <strong>보험사 이름:</strong> {insurance.resCompanyNm} <br />
-                  <strong>보험 상품명:</strong> {insurance.insuranceNm} <br />
-                  <strong>치과 보험 여부:</strong>{" "}
-                  {insurance.isDentalInsurance ? "예" : "아니요"}
-                </li>
+                <div key={index} className="insurance-card">
+                  <div className="claim-status">
+                    {insurance.isDentalInsurance
+                      ? "<치아 보험>>"
+                      : "<실비 보험>"}
+                  </div>
+                  <div className="company-name">
+                    {insurance.resCompanyNm}
+                    <br />
+                  </div>
+                  <div className="insurance-name">
+                    {insurance.insuranceNm}
+                    <br />
+                  </div>
+                </div>
               ))}
-            </ul>
+            </div>
           )}
         </div>
       )}

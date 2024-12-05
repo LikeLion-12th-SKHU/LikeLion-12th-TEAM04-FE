@@ -33,6 +33,16 @@
   margin-top: 16px;
 }
 
+.git-icon {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.git-icon img {
+  width: 50px;
+}
+
 .footer-section ul {
   list-style-type: none;
   padding: 0;

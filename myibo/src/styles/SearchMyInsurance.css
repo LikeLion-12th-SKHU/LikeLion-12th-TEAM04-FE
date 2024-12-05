@@ -1,17 +1,17 @@
-.Search-main-content {
+/* .Search-main-content {
   margin: 20px 10px 20px 20px;
-}
+} */
 
 .insurance-card {
   background-color: #65b4ad;
   border-radius: 10px;
   padding: 20px;
-  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
   width: 200px;
+  margin-bottom: 10px;
 }
 
 .logo {

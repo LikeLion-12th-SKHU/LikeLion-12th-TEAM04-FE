@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import "../../styles/SearchBenefit.css";
 import axios from "axios";
 import {
   setSearchResult,
@@ -21,7 +22,7 @@ const SearchBenefit = ({ searchTerm }) => {
       const tokenFromStorage = localStorage.getItem("accessToken");
 
       if (!tokenFromStorage) {
-        dispatch(setError("토큰이 존재하지 않습니다."));
+        dispatch(setError("로그인 해주세요"));
         dispatch(setLoading(false));
         return;
       }
@@ -29,10 +30,9 @@ const SearchBenefit = ({ searchTerm }) => {
       dispatch(setToken(tokenFromStorage));
 
       try {
-        // 쿼리 문자열을 API 명세에 맞게 구성
         const encodedSearchTerm = encodeURIComponent(searchTerm);
         const response = await axios.get(
-          `https://tearofserver.store/api/v1/non-covered/check/${encodedSearchTerm}`,
+          `https://tearofserver.store/api/v1/non-covered/check/shortName?shortName=${encodedSearchTerm}`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -41,10 +41,11 @@ const SearchBenefit = ({ searchTerm }) => {
           }
         );
 
-        console.log(response.data);
+        console.log("API Response:", response.data);
 
         if (response.data.code === 200) {
-          dispatch(setSearchResult(response.data));
+          console.log("Search Result Data:", response.data.data);
+          dispatch(setSearchResult(response.data.data)); // 상태 업데이트
         } else {
           dispatch(setError(response.data.message));
         }
@@ -69,8 +70,15 @@ const SearchBenefit = ({ searchTerm }) => {
       ) : error ? (
         <div>{error}</div>
       ) : (
-        <div>
-          <h4>급여 여부: {searchResult?.data ? "급여" : "비급여"}</h4>
+        <div className="result-container">
+          <h2>
+            {searchTerm}는 국민건강보험에 따르면{" "}
+            {searchResult ? "비급여" : "급여"}에 해당 되나,
+          </h2>
+          <h3>치료 목적과 방법 및 사용 약제에 따라 달라질 수 있습니다.</h3>
+          <p>
+            *치료명을 정확하게 입력하지 않았을 시 정확도가 떨어질 수 있습니다.
+          </p>
         </div>
       )}
     </div>

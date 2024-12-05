@@ -43,10 +43,10 @@ const SearchPage = () => {
       <div className="search-page__container">
         <input
           type="text"
-          placeholder="치료명 입력"
+          placeholder="치료명을 정확하게 입력해주세요."
           value={searchTerm}
-          onChange={handleInputChange} // 변경된 핸들러 사용
-          onKeyDown={handleKeyDown} // 엔터 키 이벤트 핸들러 추가
+          onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
           className="search-page__input"
         />
         <button onClick={handleSearch} className="search-page__button">
@@ -55,14 +55,18 @@ const SearchPage = () => {
       </div>
 
       {isSearched && searchTerm && (
-        <>
+        <div className="search-results">
+          {" "}
           <SearchBenefit className="SP-content" searchTerm={searchTerm} />
-          <SearchMyInsurance className="SP-content" searchTerm={searchTerm} />
-          <SearchRecommendedInsurance
-            className="SP-content"
-            searchTerm={searchTerm}
-          />
-        </>
+          <div className="horizontal-container">
+            {" "}
+            <SearchMyInsurance className="SP-content" searchTerm={searchTerm} />
+            <SearchRecommendedInsurance
+              className="SP-content"
+              searchTerm={searchTerm}
+            />
+          </div>
+        </div>
       )}
     </div>
   );
